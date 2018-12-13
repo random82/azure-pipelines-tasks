@@ -98,6 +98,21 @@
             "helpMarkDown": "Name of the Azure SQL Database, where the files will be deployed."
         },
         {
+            "name": "AuthenticationMethodSelector",
+            "aliases": [
+                "authenticationMethod"
+            ],
+            "type": "pickList",
+            "label": "Azure SQL authentication method",
+            "required": true,
+            "helpMarkDown": "Choose a method to authenticate to Azure SQL database [More info](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-security-overview#authentication)",
+            "defaultValue": "SqlServerAuthenticationName",
+            "options": {
+                "SqlServerAuthenticationName": "SQL Server Authentication",
+                "ActiveDirectoryPasswordName": "Active Directory - Password"
+            }
+        },
+        {
             "name": "SqlUsername",
             "type": "string",
             "label": "Server Admin Login",
